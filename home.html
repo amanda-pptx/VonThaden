@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-image: url(src/images/cropped-20171231_194809.jpg);">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,25 +14,27 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <style>
-        html body{background-color: white;
-             margin: 0;
-             font-weight: 200;;
+        html{background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            min-height: 100%;
+            min-width: 100%;
         }
         nav{display:flex;
             padding: 20px;
-            font-weight: 200;
-            flex-wrap: wrap;
         }
         .container-fluid{
             padding:0;
+        }
+        .nav-bar{
+            width:auto;
         }
         a:-webkit-any-link{ cursor: pointer;
             color:black;
             text-decoration: none;
             font-weight: 200;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        button{border-width: 1px;            
+            font-family:Verdana, Geneva, Tahoma, sans-serif;        }
+        button{            
             cursor: pointer;
         }
         .navbarName{
@@ -47,20 +49,33 @@
             width: 100%;
             flex-direction: row-reverse;
             justify-content: space-between;
-    }
+        }
         #navbarNavAltMarkup{ 
-            display:inline;
+            padding: 0px 5px;
+            justify-content:flex-end;
             font-weight:200;
         }
         a:visited{
             text-decoration: none;
         }
-        .navbar-nav{ display:inline-block;
-            justify-items: flex-end;
+        .nav-link:hover{
+            color: rgb(114, 128, 160);
+        }
+        element.style{
+            display:flex;
+        }
+        .navbar-nav{ display:flex;
+            align-items: flex-end;
+            background-color:aliceblue;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            padding: 5px 30px;
         }
         .nav-link{
-            padding: 3px
+            padding: 3px;
         }
+        .caro{width: 33.3333333%;
+            align-items: center;}
     </style>
 </head>
 <body>
@@ -68,8 +83,8 @@
         <nav class="navbar">
             <div class="container-fluid">
                 <a href="home.html" class="navbarName nav-item">Audio Concepts</a>
-                <button class="navbar-toggler" type="button" onclick="Toggle()" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle Navigation">
+                <button class="navbar-toggler" type="button" onclick="Toggle()" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
                             viewBox="0 0 16 16">
@@ -82,19 +97,19 @@
                 
             
         </nav>
-        <div id="navbarNavAltMarkup">
+        <div id="navbarNavAltMarkup" style="display:flex">
             <div class="navbar-nav">
                 <a href="home.html" class="nav-item nav-link active">Home</a>
                 <a href="features&pricing" class="nav-item nav-link">Features & Pricing</a>
             </div>
-                </div>
+        </div>
     </div>
 </body>
 <script>
     function Toggle(){
         var toggle = document.getElementById("navbarNavAltMarkup");
         if (toggle.style.display === "none") {
-            toggle.style.display="block";
+            toggle.style.display="flex";
         } else {
             toggle.style.display = "none"
         }
