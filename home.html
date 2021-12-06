@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" style="background-image: url(src/images/cropped-20171231_194809.jpg);">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,91 +15,136 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <style>
-        html{background-repeat: no-repeat;
+        html {
+            background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             min-height: 100%;
             min-width: 100%;
         }
-        nav{display:flex;
+        body{
+            background:transparent;
+        }
+
+        nav {
+            display: flex;
+            width: 100%;
+            background-color: aliceblue;
             padding: 20px;
+            
+            
+    
         }
-        .container-fluid{
-            padding:0;
+        
+        .container-fluid {
+            padding: 0;
+            display: inline-flex;
+
+            
         }
-        .nav-bar{
-            width:auto;
-        }
-        a:-webkit-any-link{ cursor: pointer;
-            color:black;
+
+        a:-webkit-any-link {
+            cursor: pointer;
+            color: black;
             text-decoration: none;
             font-weight: 200;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;        }
-        button{            
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        button {
             cursor: pointer;
+            margin: 0;
+            display:inline-flex;
         }
-        .navbarName{
+
+        .navbarName {
             font-size: 20px;
+
         }
-        .navbar-toggler{ padding: 10px;
+        .navbar-toggler {
+            padding: 10px;
+            margin: 0 auto;
             border-color: black;
             border-radius: 10px;
-            background-color: white;        
+            display: inline-block;
+            background-color: aliceblue;
         }
-        .navbar{background: aliceblue;
-            width: 100%;
-            flex-direction: row-reverse;
-            justify-content: space-between;
+        .content{
+            background: transparent;
+             display:flex;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            background-color: aliceblue;
         }
-        #navbarNavAltMarkup{ 
-            padding: 0px 5px;
-            justify-content:flex-end;
-            font-weight:200;
+        .navbar {
+            display:inline-flex;
+            background-color: rgb(169, 215, 255);
         }
-        a:visited{
+
+        a:visited {
             text-decoration: none;
         }
-        .nav-link:hover{
+
+        .nav-link:hover {
             color: rgb(114, 128, 160);
+            transition: ease-in-out 0.5s;
         }
-        element.style{
-            display:flex;
+
+        element.style {
+            display: flex;
         }
-        .navbar-nav{ display:flex;
+
+        .navbar-nav {
             align-items: flex-end;
-            background-color:aliceblue;
+            background-color: rgb(169, 215, 255);
             border-bottom-left-radius: 3px;
             border-bottom-right-radius: 3px;
             padding: 5px 30px;
         }
-        .nav-link{
+        
+        .nav-link {
             padding: 3px;
         }
-        .caro{width: 33.3333333%;
-            align-items: center;}
+        span{
+            display:inline-flex;
+        }
+        #subtitle{ display:flex;
+            font-weight: 200;
+            font-size: small;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .container{
+            display:inline-flex;
+            flex-direction:column;
+            align-items: flex-start;
+            margin: 0;
+            padding: 0;
+        }
     </style>
 </head>
+
 <body>
-    <div class="nav-bar">
         <nav class="navbar">
-            <div class="container-fluid">
-                <a href="home.html" class="navbarName nav-item">Audio Concepts</a>
-                <button class="navbar-toggler" type="button" onclick="Toggle()" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="container">
+                    <a href="home.html" class="navbarName nav-item">Audio Concepts
+                    </a>
+                    <span id="subtitle">A Northern California DJ & Lighting Company</span>
+
+                </div>
+                <button class="navbar-toggler" type="button" onclick="Toggle()" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
-                            viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" class="toggler" styl
                                 d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                        </svg>            
+                        </svg>
                     </span>
                 </button>
-            </div>    
-                
-            
         </nav>
-        <div id="navbarNavAltMarkup" style="display:flex">
-            <div class="navbar-nav">
+        <div class="content">
+            <div class="navbar-nav" id="navbarNavAltMarkup" style="display:flex">
                 <a href="home.html" class="nav-item nav-link active">Home</a>
                 <a href="features&pricing" class="nav-item nav-link">Features & Pricing</a>
             </div>
@@ -106,13 +152,14 @@
     </div>
 </body>
 <script>
-    function Toggle(){
+    function Toggle() {
         var toggle = document.getElementById("navbarNavAltMarkup");
         if (toggle.style.display === "none") {
-            toggle.style.display="flex";
+            toggle.style.display = "flex";
         } else {
             toggle.style.display = "none"
         }
     }
 </script>
+
 </html>
